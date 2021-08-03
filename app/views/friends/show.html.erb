@@ -1,0 +1,49 @@
+
+<div class="modal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Modalsssss body text goes here.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<p>
+  <strong>First name:</strong>
+  <%= @friend.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @friend.last_name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @friend.email %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @friend.phone %>
+</p>
+
+<p>
+  <strong>Twitter:</strong>
+  <%= @friend.twitter %>
+</p>
+
+<%= link_to 'Edit', edit_friend_path(@friend), class:"btn btn-secondary" %> |
+
+<%= link_to 'Delete', @friend, method: :delete, data: { confirm: 'Are you sure?' }, class: " btn btn-outline-danger" %>
+
+<%= link_to 'Back', friends_path, class:"btn btn-secondary" %>
